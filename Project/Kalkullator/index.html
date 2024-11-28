@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Modern</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" class="display" disabled>
+        <div class="buttons">
+            <!-- Row 1: Clear, Delete, Divide -->
+            <button class="btn" onclick="clearDisplay()">C</button>
+            <button class="btn" onclick="deleteLast()">←</button>
+            <button class="btn operator" onclick="operate('/')">/</button>
+
+            <!-- Row 2: Numbers 7-9, Multiply -->
+            <button class="btn" onclick="appendNumber(7)">7</button>
+            <button class="btn" onclick="appendNumber(8)">8</button>
+            <button class="btn" onclick="appendNumber(9)">9</button>
+            <button class="btn operator" onclick="operate('*')">*</button>
+
+            <!-- Row 3: Numbers 4-6, Subtract -->
+            <button class="btn" onclick="appendNumber(4)">4</button>
+            <button class="btn" onclick="appendNumber(5)">5</button>
+            <button class="btn" onclick="appendNumber(6)">6</button>
+            <button class="btn operator" onclick="operate('-')">-</button>
+
+            <!-- Row 4: Numbers 1-3, Add -->
+            <button class="btn" onclick="appendNumber(1)">1</button>
+            <button class="btn" onclick="appendNumber(2)">2</button>
+            <button class="btn" onclick="appendNumber(3)">3</button>
+            <button class="btn operator" onclick="operate('+')">+</button>
+
+            <!-- Row 5: Number 0, Equal -->
+            <button class="btn" onclick="appendNumber(0)">0</button>
+            <button class="btn operator" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

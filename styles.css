@@ -1,0 +1,195 @@
+/* Reset dan Gaya Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #2b2b2b;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 3px solid #b58fc9; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+}
+
+/* Navigasi */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+    white-space: nowrap; 
+    margin: 0 auto; 
+    justify-content: center; 
+    width: 100%; 
+    overflow-x: auto; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #f2f2f2;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #b58fc9;
+}
+
+/* Scroll Halus */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Bagian Umum */
+section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #b58fc9;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #444;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+p, a {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: #b58fc9;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #f2f2f2;
+}
+
+/* Kotak Umum */
+.box {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    position: relative;
+    color: white;
+    border: 2px solid #b58fc9;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px 4px #b58fc9;
+    border: 2px solid #b58fc9;
+}
+
+/* Kontainer Skill, Proyek, Sertifikat */
+.skills-container, .projects-container, .certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.skill-box {
+    text-align: center;
+}
+
+.skill-img {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+/* Kotak Proyek dan Sertifikat */
+.project-box, .certificate-box {
+    text-align: center;
+}
+
+.project-link, .contact-box a {
+    color: #b58fc9;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover, .contact-box a:hover {
+    color: #f2f2f2;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    header {
+        justify-content: center; 
+        padding: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0.5rem;
+        overflow-x: auto;
+    }
+
+    .skills-container, .projects-container, .certificates-container {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Warna Aktif */
+nav a:active {
+    color: #ca56ff;
+}
+
+/* Hover Sertifikat */
+.certificate-box:hover {
+    box-shadow: 0 0 15px 4px #b58fc9;
+    background-color: #333;
+    border: 2px solid #b58fc9;
+}
+
+/* Hover Proyek */
+.project-box:hover {
+    box-shadow: 0 0 15px 4px #b58fc9;
+    background-color: #333;
+    border: 2px solid #b58fc9;
+}
